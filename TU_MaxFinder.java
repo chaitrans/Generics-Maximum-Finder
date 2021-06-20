@@ -4,23 +4,24 @@ import org.junit.jupiter.api.Test;
 
 public class TU_MaxFinder {
     @Test
-    void whenFloatShouldReturnMax1() {
-        Float num1 = 10.5f, num2 = 5.5f, num3 = 1.5f;
-        Float max = MaxFinder.findMax(num1, num2, num3);
-        Assertions.assertEquals(10.5f, max, "Validating max method");
+    void whenStringShouldReturnMax1() {
+        String str1 = "Peach", str2 = "Banana", str3 = "Apple";
+        String maxString = MaxFinder.findMax(str1, str2, str3);
+        Assertions.assertEquals( "Peach", maxString, "Validating maxFinder function");
     }
 
     @Test
-    void whenFloatShouldReturnMax2() {
-        Float num1 = 1.5f, num2 = 11.5f, num3 = 5.5f;
-        Float max = MaxFinder.findMax(num1, num2, num3);
-        Assertions.assertEquals(11.5f, max, "Validating max method");
+    void whenStringShouldReturnMax2() {
+        String str1="Apple", str2 = "Peach", str3 = "Banana";
+        String maxString = MaxFinder.findMax(str1, str2, str3);
+        Assertions.assertEquals("Peach", maxString, "Validating maxFinder function");
     }
 
     @Test
-    void whenFloatShouldReturnMax3() {
-        Float num1 = 5.5f, num2 = 1.5f, num3 = 110.5f;
-        Float max = MaxFinder.findMax(num1, num2, num3);
-        Assertions.assertEquals(110.5f, max, "Validating max method");
+    void whenStringShouldReturnMax3() {
+        String str1="Banana", str2 = "Apple", str3 = "Peach";
+        String maxString = MaxFinder.findMax(str1, str2, str3);
+        Assertions.assertEquals("Peach", maxString, "Validating maxFinder function");
+
     }
 }
