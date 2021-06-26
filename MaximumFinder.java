@@ -1,16 +1,22 @@
 import java.util.Scanner;
 
-public class MaximumFinder {
-    static Scanner sc = new Scanner(System.in);
+/**
+ * Finding the maximum value in Integer, Float, String array using Generic type.
+ * @author Chaitra NS
+ * @since 24 Jun 2021
+ */
+
+public class MaxFinder {
+    static Scanner scanner = new Scanner(System.in);
     public static void main(String[] args) {
         System.out.println("Press 1 to find maximum of Integers\nPress 2 to find maximum of Float number\nPress 3 to find maximum of String");
         System.out.print("Enter option : ");
-        int option = sc.nextInt();
+        int option = scanner.nextInt();
 
         switch (option) {
             case 1:
                 System.out.println("Enter a size of Integer array: ");
-                int size = sc.nextInt();
+                int size = scanner.nextInt();
                 Integer[] integersArray = new Integer[size];
                 integersArray = printInteger(integersArray, size);
                 Integer integerMax = findMax(integersArray);
@@ -18,7 +24,7 @@ public class MaximumFinder {
                 break;
             case 2:
                 System.out.println("Enter a size of float array: ");
-                size = sc.nextInt();
+                size = scanner.nextInt();
                 Float[] floatsArray = new Float[size];
                 floatsArray = printFloat(floatsArray, size);
                 Float floatMax = findMax(floatsArray);
@@ -26,7 +32,7 @@ public class MaximumFinder {
                 break;
             case 3:
                 System.out.println("Enter a size of String array: ");
-                size = sc.nextInt();
+                size = scanner.nextInt();
                 String[] stringsArray = new String[size];
                 stringsArray = printString(stringsArray, size);
                 String stringMax = findMax(stringsArray);
@@ -40,7 +46,7 @@ public class MaximumFinder {
     public static Integer[] printInteger(Integer[] integersArray, int size) {
         for (int i = 0; i<size; i++) {
             System.out.println("Enter array value : ");
-            integersArray[i] = sc.nextInt();
+            integersArray[i] = scanner.nextInt();
         }
         return integersArray;
     }
@@ -48,7 +54,7 @@ public class MaximumFinder {
     public static Float[] printFloat(Float[] floatsArray, int size) {
         for (int i = 0; i<size; i++) {
             System.out.println("Enter array value : ");
-            floatsArray[i] = sc.nextFloat();
+            floatsArray[i] = scanner.nextFloat();
         }
         return floatsArray;
     }
@@ -56,7 +62,7 @@ public class MaximumFinder {
     public static String[] printString(String[] stringsArray, int size) {
         for (int i = 0; i<size; i++) {
             System.out.println("Enter array value : ");
-            stringsArray[i] = sc.next();
+            stringsArray[i] = scanner.next();
         }
         return stringsArray;
     }
@@ -71,6 +77,6 @@ public class MaximumFinder {
             }
         }
         return max;
-
     }
+
 }
